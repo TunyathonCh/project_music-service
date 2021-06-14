@@ -1,0 +1,202 @@
+
+/* หน้าheader2 */
+.navbar-default{
+    background-color: #222 !important;
+    border:none;
+}
+.dropdown:hover{
+    background-color: grey;
+  }
+
+
+/* หน้าsignUp */
+#namepage{
+    text-align: center !important;
+}
+#logo{
+    text-align: center !important;
+}
+.signupform{
+    text-align: center ;
+}
+
+.form-email{
+    margin-bottom: 10px;
+    
+}
+
+#color-login{
+    color: blue;
+}
+::-webkit-input-placeholder {
+    color: #808080;
+    text-align: center;
+ }
+:-moz-placeholder {
+    color: #808080;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+#nextbutton{
+    color: black;
+    text-decoration: none;
+}
+
+/* หน้าsignUp */
+.color-backtopre{
+    color: grey;
+}
+.backtopre{
+    margin-top: 50px;
+}
+
+
+/* หน้าmain-side navbar */
+body {
+    font-family: "Lato", sans-serif;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  } 
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 51px;
+    left: 0;
+    background-color: #222;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* หน้าmain */
+#artist-color{
+    color: #32CD32;
+}
+.bg-color-artist{
+    background-color: #444;
+}
+
+ img {
+            border: 0px solid #dee2e6 !important;
+            
+        }
+        .shadow{
+            border-radius: 10px;
+        }
+
+        .img-thumbnail{
+            padding: 0rem;
+            border-radius: 10px;
+            
+        }
+
+        .content .content-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 1;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+            border-radius: 10px;
+        }
+
+
+        .content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden
+        }
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+        }
+
+        .content:hover .content-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1
+
+        }
+        .fadeIn-bottom {
+            top: 60%
+        }
+        .content-details h3 {
+            color: #90EE90;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase
+        }
+        body{
+            background:	#444;
+        }
+
+
+/* หน้า foradmin */
+.addartist{
+    margin-top: 10px;
+}
+.foradmin{
+    margin-top: 50px;
+}
+#artistmore{
+    text-decoration: underline;
+    
+}
+
+/* หน้า showsong */
+.showsong-title{
+    margin-left: 550px; 
+    margin-top: 80px;
+}
+.hoversong:hover{
+    background-color: #222;
+    
+}
+.songhover:hover{
+    text-decoration: none;
+}
+
+
+
+  
+
+
+
+
+
+
+
+

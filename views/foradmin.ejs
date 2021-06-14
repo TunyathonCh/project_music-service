@@ -1,0 +1,133 @@
+<%- include('partials/header3.ejs') %>
+<script src="foradminalbum.js" defer></script>
+<div class='container'>
+<div class='foradmin'>
+<form action='/foradmin' method='POST' enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class=".form-label" style="color: #90EE90;">Artist Name</label>
+      <input type="text" class="form-control" name='artistname' placeholder="Artist Name">
+
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" style="color: #90EE90;">Image</label>
+      <input type="file" class="form-control" name='image' accept="image/*">
+    </div>
+    
+
+    <div class="mb-3">
+      <label class="form-label" style="color: #90EE90;">Nationality</label>
+      <br>
+      <select name='nationality'>
+        <option value="Thai">Thai</option>
+        <option value="Int'l">International</option>
+      </select>
+      <br>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" style="color: #90EE90;">Gender</label>
+      <br>
+      <select name='gender'>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <br>
+    </div>
+
+    <div class='addartist'><button type="submit" class="btn btn-primary">Add</button>
+    </div>
+  </form>
+</div>
+</div>
+
+
+<div class='container'>
+  <div class='foradmin'>
+  <form action='/foradminalbum' method='POST' enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" style="color: #90EE90;">Album Name</label>
+        <input type="text" class="form-control" name='albumname' placeholder="Album Name">
+      </div>
+      
+       <label class=".form-label" style="color: #90EE90;">Artist Name</label>
+       <br>
+       <select id='artistid' name='artistid'> 
+       <% artists.forEach(function(artist){ %>
+                <option value="<%= artist._id %>"><%= artist.artistname %></option>
+                
+        <% }); %>
+       </select> 
+
+      <div class="mb-3">
+        <label class="form-label" style="color: #90EE90;">Album Cover</label>
+        <input type="file" class="form-control" name='albumcover' accept="albumcover/*">
+      </div>
+
+      <div class='addartist'><button type="submit" class="btn btn-primary">Add</button>
+      
+      </div>
+
+    
+    </form>
+  </div>
+  </div>
+
+
+
+<div class='container'>
+    <div class='foradmin'>
+    <form action='/foradminsong' method='POST' enctype="multipart/form-data">
+        <div class="mb-3">
+          <label class="form-label" style="color: #90EE90;">Song Name</label>
+          <input type="text" class="form-control" name='songname' placeholder="Song Name">
+    
+        </div>
+        
+         <label class=".form-label" style="color: #90EE90;">Artist Name</label>
+         <br>
+         <select id='artistid' name='artistid' onchange="displayalbum(this)" data-allartists="<%= jsonArtists %>"> 
+         <% artists.forEach(function(artist){ %>
+                  <option value="<%= artist._id %>"><%= artist.artistname %></option>
+                  
+          <% }); %>
+         </select> 
+
+         <label class=".form-label" style="color: #90EE90;">Album Name</label>
+        <select id='albumid' name='albumname'>
+          <!-- <% artists.forEach(function(artist){ %>
+            <% if(artist.albums){artist.albums.forEach(function(album){ %>
+            <option value="<%= album.id %>"><%= album.name %></option>
+            <% })}; %>
+          <% }); %> -->
+            
+         </select>
+        <div class="mb-3">
+          <label class="form-label" style="color: #90EE90;">Lyrics</label>
+          <input type="file" class="form-control" name='lyrics' accept="lyrics/*">
+        </div>
+        
+       
+        <div class='addartist'><button type="submit" class="btn btn-primary">Add</button>
+        
+        </div>
+
+      
+      </form>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+
+
+
+    
+
+<%- include('partials/footer.ejs') %>

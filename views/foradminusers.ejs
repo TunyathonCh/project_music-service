@@ -1,0 +1,41 @@
+<%- include('partials/header3.ejs') %>
+<script src="foradminalbum.js" defer></script>
+<div class='container'>
+<div class='foradmin'>
+<form action='/foradmin' method='POST' enctype="multipart/form-data">
+<div class="container" >
+    <h3 style="color: #90EE90;text-align: left;margin-top: 30px;" class="artiststitle">All Users</h3>
+    <div class="row">
+
+    <ol style="color: white; font-size: large;">
+    <% users.forEach(function(user){ %>
+                
+        <li >
+            <div style="width:200px">
+                <div style="float:left;color:white">
+                    <%= user.username %>
+                </div>
+                <div style="float:right">
+                   <a style="text-decoration: underline;color: pink;" href="/foradmin/userdelete/<%= user._id %>">Delete</a>
+                </div>
+            </div>
+            
+        </li>
+    
+            
+    <% }); %>
+    </ol> 
+    </div>  
+
+
+       
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<%- include('partials/footer.ejs') %>

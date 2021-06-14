@@ -1,0 +1,47 @@
+<%- include('partials/header2.ejs') %> 
+
+<div style="background-color: #444;">
+<div class="container" >
+    
+<div class="album py-5 bg-light">
+    <div class="container" style="margin-top: 100px;">
+        
+                <div class="row">
+                <img style="float: left;margin-right: 30px;" class="image-artist" src='<%= artist.album.cover %>' width="140" height="140" >
+                <div class="row">
+                    <h3 style="color: white;margin-top: 50px;"><%= artist.album.name %></h3>
+                    <br>
+                    <br>
+                    <h4 style="color: white;float: left;margin-top: -20px;"><%= artist.artistname %></h4>
+                    </div>
+                </div>
+               
+                <br>
+                
+                
+                <div class="row">
+                    <h3 style="color: #00FF7F;">All Tracks</h3>
+                
+                <div style="color: white; ">
+                    <div class="row">
+                    <ol style="color: white;margin-top: 20px;">
+                    <% artist.songs.forEach(function(song){ %>
+                        
+                        <li class="hoversong" style="margin-top: 0px !important;"> <a class="songhover" href="/artists/<%= artist._id %>/songs/<%= song._id %>"><h4 style="color: white;"><%= song.songname %></h4></a></li>
+                        
+                            
+                    <% }); %>
+                    </ol>
+                    </div>
+                </div>
+                </div>
+               
+               
+
+               
+    </div>
+</div>
+</div>
+</div>
+      
+<%- include('partials/footer.ejs') %>

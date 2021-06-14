@@ -1,0 +1,71 @@
+<%- include('partials/header2.ejs') %> 
+
+<div style="background-color: #444;">
+
+    
+
+    <div class="container" style="margin-top: 60px;">
+        
+                <h3 style="color: #90EE90;text-align: left;" >Result Artists name by search</h3>
+                
+    
+                <h3 style="color: white;">Artists</h3>
+                <div style="color: white; ">
+                    <ol style="color: white;margin-top: 20px;">
+                    <% artists.forEach(function(artist){ %>
+                        
+                        <li class="hoversong" style="margin-top: 0px !important;"> <a class="songhover" href="/artists/<%= artist._id %>"><h4 style="color: white;"><%= artist.artistname %></h4></a></li>
+                        
+                            
+                    <% }); %>
+                    </ol>
+                </div>
+                <br>
+                <br>
+
+                <h3 style="color: #90EE90;text-align: left;" >Result Albums name by search</h3>
+                
+    
+                <h3 style="color: white;">Albums</h3>
+                <div style="color: white; ">
+                    <ol style="color: white;margin-top: 20px;">
+                    <% albumsartists.forEach(function(artist){ %>
+                        <% artist.albums.forEach(function(album){ %>
+                        
+                        <li class="hoversong" style="margin-top: 0px !important;"> <a class="songhover" href="/artists/<%= artist._id %>/albums/<%= album.name %>"><h4 style="color: white;"><%= album.name %><span style="color:#00FF7F">-<%= artist.artistname %></h4></a></li>
+                        
+                        <% }); %>
+                    <% }); %>
+                    </ol>
+                </div>
+                <br>
+                <br>
+
+                <h3 style="color: #90EE90;text-align: left;" >Result Songs name by search</h3>
+                
+    
+                <h3 style="color: white;">Songs</h3>
+                <div style="color: white; ">
+                    <ol style="color: white;margin-top: 20px;">
+                    <% songs.forEach(function(song){ %>
+                        
+                        <li class="hoversong" style="margin-top: 0px !important;"> <a class="songhover" href="/artists/<%= song.artistid %>/songs/<%= song._id %>"><h4 style="color: white;"><%= song.songname %><span style="color:#90EE90">-<%= song.albumname %></span><span style="color:#00FF7F">/<%= song.artistname %></h4></a></li>
+                        
+                            
+                    <% }); %>
+                    </ol>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+               
+
+               
+    </div>
+
+</div>
+      
+<%- include('partials/footer.ejs') %>

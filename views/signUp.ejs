@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/app.css">
+<script src="signUp.js" defer></script>
+
+<div class="afternext">
+<div class="container" style="margin-top: 100px;">
+    <div class="col-md-6 mx-auto text-center">
+       <div class="header-title">
+          <h2 class="wv-heading--title" id="logo">MUSIC</h2>
+          <h1 style="color:#90EE90" class="wv-heading--subtitle" id="namepage">Sign Up</h1>
+       </div>
+
+       <hr style="width: 400px;">
+    </div>
+    
+
+          <div class="signupform">
+            <p style="font-size: 20px;color: white;">Sign-up with your username and password</p>
+
+        
+             <form class="signup-margin" action="/signup" method="POST" name="signup-username-password">
+
+                    <input type="text" name="username" placeholder="Username" size="30"><br><br>
+                    <input type="password" name="password" id="password" placeholder="password" onkeyup="checkPass()" size="30"><br><br>
+                    <input type="password" name="password2" id="password2" placeholder="Re-enter password" onkeyup="checkPass()" size="30" ><br><br>
+
+                <div >
+                   <button id="confirmMessage" class="button-next" disabled ><a id="nextbutton" >Create account</a></button>
+                </div>
+                <div class="col-md-12 ">
+                      <hr style="width: 400px;">
+                      <br>
+                      <p class="color-backtopre">Already have an account?<a style="color:#90EE90" id="color-login" href="/login">Log In</a></p>
+                      
+                      
+                </div>
+             
+                
+             </form>
+          </div>
+
+ </div>
+</div>
